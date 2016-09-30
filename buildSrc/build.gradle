@@ -1,0 +1,15 @@
+plugins {
+	id "nebula.kotlin" version "1.0.4"
+}
+repositories {
+	jcenter()
+}
+dependencies {
+	compile 'org.jetbrains.kotlin:kotlin-stdlib'
+	compileOnly 'org.projectlombok:lombok:1.16.10'
+	kapt 'org.projectlombok:lombok:1.16.10'
+}
+kapt {
+	generateStubs = true
+}
+sourceSets.main.java.srcDirs = ['../dummy/src/main/java']
